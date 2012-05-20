@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 //import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ImageView;
 //import android.view.View;
@@ -33,11 +34,13 @@ public class Main extends Activity implements SurfaceHolder.Callback {
     private SurfaceView prSurfaceView;
     private Button prStartBtn;
     private Button prSettingsBtn;
+
     private boolean prRecordInProcess;
     private SurfaceHolder prSurfaceHolder;
     private Camera prCamera;
 	private final String cVideoFilePath = "/sdcard/fps1/";
     private ImageView prImageView1;
+    private TextView txtText2;
     
 	private Context prContext;
     @Override
@@ -50,6 +53,17 @@ public class Main extends Activity implements SurfaceHolder.Callback {
         prSurfaceView = (SurfaceView) findViewById(R.id.surface_camera);
         prStartBtn = (Button) findViewById(R.id.main_btn1);
         prSettingsBtn = (Button) findViewById(R.id.main_btn2);
+        prImageView1 = (ImageView) findViewById(R.id.imageView1);
+        txtText2 = (TextView) findViewById(R.id.TextView02);
+        prImageView1.setOnClickListener(new View.OnClickListener() {
+
+        	  public void onClick(View v) {
+        	    // do stuff
+        		  txtText2.setText("FIRE!!");
+        	  }
+
+        	});
+      
         prRecordInProcess = false;
         prStartBtn.setOnClickListener(new View.OnClickListener() {
 			//@Override
@@ -61,6 +75,7 @@ public class Main extends Activity implements SurfaceHolder.Callback {
 				}
 			}
 		});
+
         prSettingsBtn.setOnClickListener(new View.OnClickListener() {
 			//@Override
 			public void onClick(View v) {

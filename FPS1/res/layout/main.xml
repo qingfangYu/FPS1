@@ -34,16 +34,6 @@
         </TableRow>
     </TableLayout>
     
-    <ImageView
-        android:id="@+id/imageView1"
-        android:adjustViewBounds="true" 
-		android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:maxHeight="220dp"
-        android:src="@drawable/cod_gun1" />
-    
     <TextView
         android:id="@+id/TextView01"
         android:layout_width="wrap_content"
@@ -63,5 +53,26 @@
         android:text="Engage Hostiles..."
         android:textSize="14dp"
         android:typeface="monospace" />
+
+    <ImageSwitcher
+        android:id="@+id/imageSwitcher1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@+id/main_btns" >
+    </ImageSwitcher>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:adjustViewBounds="true"
+        android:clickable="true"
+        android:longClickable="true"
+        android:maxHeight="220dp"
+        android:src="@drawable/cod_gun1" />
 
 </RelativeLayout>
