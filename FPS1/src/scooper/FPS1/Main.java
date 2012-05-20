@@ -40,6 +40,7 @@ public class Main extends Activity implements SurfaceHolder.Callback {
     private Camera prCamera;
 	private final String cVideoFilePath = "/sdcard/fps1/";
     private ImageView prImageView1;
+    private TextView txtText1;
     private TextView txtText2;
     
 	private Context prContext;
@@ -54,6 +55,7 @@ public class Main extends Activity implements SurfaceHolder.Callback {
         prStartBtn = (Button) findViewById(R.id.main_btn1);
         prSettingsBtn = (Button) findViewById(R.id.main_btn2);
         prImageView1 = (ImageView) findViewById(R.id.imageView1);
+        txtText1 = (TextView) findViewById(R.id.TextView01);
         txtText2 = (TextView) findViewById(R.id.TextView02);
         prImageView1.setOnClickListener(new View.OnClickListener() {
 
@@ -69,9 +71,12 @@ public class Main extends Activity implements SurfaceHolder.Callback {
 			//@Override
 			public void onClick(View v) {
 				if (prRecordInProcess == false) {
+					txtText1.setText("Recording...");
+					txtText2.setText("");
 					startRecording();
 				} else {
 					stopRecording();
+					txtText1.setText("Recording Stopped.");
 				}
 			}
 		});
