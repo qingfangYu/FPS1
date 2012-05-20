@@ -29,7 +29,7 @@ import android.widget.ImageView;
  //  FIXME: 1. sound on/off
  //  TODO: 2. resolution changeca
  //  TODO: 3. test github
-//   TODO: 4. khanh yes
+//   TODO: 4. khanh yes...
  // @author roman10
 
 public class Main extends Activity implements SurfaceHolder.Callback {
